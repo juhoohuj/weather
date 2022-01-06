@@ -4,7 +4,6 @@ let button = document.getElementById("search")
 button.addEventListener("click", weatherToday)
 
 function weatherToday() {
-
     let city = document.getElementById("haku").value
     let searchedCity = document.getElementById("city")
     let xhttp = new XMLHttpRequest();
@@ -26,7 +25,9 @@ function weatherToday() {
     };
     xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=+" + city + "&units=metric&appid=377080a829c7f0df00f8dfbd81bca2ff", true);
     xhttp.send();
-
     }
+
+
+    
 
 
