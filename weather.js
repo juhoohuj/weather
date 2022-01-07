@@ -1,29 +1,50 @@
 
-let button = document.getElementById("search")
+let searchButton = document.getElementById("search")
 
-button.addEventListener("click", weatherToday)
+let firstCountry = document.getElementById("first")
+let secondCountry = document.getElementById("second")
+let thirdCountry = document.getElementById("third")
+
+searchButton.addEventListener("click", weatherToday)
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function weatherToday() {
     let city = document.getElementById("haku").value
-    let searchedCity = document.getElementById("city")
     let xhttp = new XMLHttpRequest();
     let errorMsg = document.getElementById("error")
 
     xhttp.onreadystatechange = function() {
+
+
         errorMsg.innerHTML = "";
         let weather = JSON.parse(this.response)
 	    if (this.readyState == 4 && this.status == 200) {
-	     // Access the result here
-         document.getElementById("city").innerHTML = weather.name + "<br>"
-	     document.getElementById("weather").innerHTML =  "Lämpötila nyt: " + Math.round(weather.main.temp) + "<br>" + "Tuntuu kuin: " + Math.round(weather.main.feels_like);
+	     
+            // Access the result here
+            document.getElementById("searchedcity").innerHTML = weather.name + " , " + weather.sys.country;
+            document.getElementById("weather").innerHTML =  "Lämpötila nyt: " + Math.round(weather.main.temp) + "&deg;";
+            document.getElementById("feelslike").innerHTML = "Tuntuu kuin: " + Math.round(weather.main.feels_like) + "&deg;";
+            document.getElementById("lowest").innerHTML = "Alin lämpötila: " + Math.round(weather.main.temp_min) + "&deg;";
+            document.getElementById("highest").innerHTML = "Ylin lämpötila: " + Math.round(weather.main.temp_max) + "&deg;";
+
+            document.getElementById("desc").innerHTML = "Kuvaus: " + weather.weather[0].description;
+
+            document.getElementById("wind").innerHTML = "Tuuli: " + weather.wind.speed + " m/s";
+            document.getElementById("cloudiness").innerHTML = "Pilvisyys: " + weather.clouds.all + "%";
+            
+
+            if {}
         }
         
-        if (searchedCity.innerHTML === "") {
+        else {
         errorMsg.innerHTML = "Kaupunkia ei löytynyt";
         return;
     }
     };
-    xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=+" + city + "&units=metric&appid=377080a829c7f0df00f8dfbd81bca2ff", true);
+    xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=+" + city + "&units=metric&appid=377080a829c7f0df00f8dfbd81bca2ff&lang=fi", true);
     xhttp.send();
     }
 
