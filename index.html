@@ -17,13 +17,39 @@
         <button id="search">Hae</button>
         <div id="info">
             <div id="city">
-                <h2 id="city">OULU</h2>
+                <p id="error"></p>
+                <h2 id="searchedcity"></h2>
+                <p id="weather"></p>
             </div>
 
-            <p id="weather"></p>
-            <p id="error"></p>
+            <div id="databox1">
+                <ul>
+                    <li id="feelslike"></li>
+                    <li id="lowest"></li>
+                    <li id="highest"></li>
+
+                </ul>
+            </div>
+
+            <div id="databox2">
+                <ul>
+                    <li id="desc"></li>
+                    <li id="wind"></li>
+                    <li id="cloudiness"></li>
+                </ul>
+            </div>
+            <div id="searched">
+                <h3>Äskettäin haetut kaupungit</h3>
+                <button class="link" id="first">ESIM</button> <br>
+                <button class="link" id="second">ESIM</button> <br>
+                <button class="link" id="third">ESIM</button>
+            </div>
         </div>
     </div>
+
+    <footer>
+        Juho Ahonen &#169 2022
+    </footer>
 
     <script src="weather.js"></script>
 </body>
