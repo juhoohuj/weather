@@ -1,35 +1,100 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    background-image: url(images/lasku.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background-image: url(images/lasku.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
-    padding-top: 20px;
-    text-decoration: underline;
+  padding-top: 20px;
+  text-decoration: underline;
 }
 
 #contents {
-    margin-top: 40px;
-    background-color: rgba(205, 205, 205, 0.6) ;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    height: 799px;
-    width: 700px;
-    border-radius: 3px;
+  margin-top: 40px;
+  background-color: rgba(205, 205, 205, 0.6);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 800px;
+  width: 700px;
+  border-radius: 3px;
 }
 
 #info {
-    display: flex;
-    background-color: aliceblue;
-    width: 400px;
-    height: 400px;
+  display: grid;
+  max-width: 100%;
+  min-height: 85%;
+  grid-template-rows:  7em 25em 7em;
+  grid-template-columns: 345px 345px ;
+  gap: 10px;
+
 }
 
-#weather {
-    position: relative;
-    top: 40px;
+#city {
+    font-size: 1em;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#databox1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#databox2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#databox1, #databox2 {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+ul li {
+    list-style: none;
+}
+
+#searched {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: brown;
+}
+
+footer {
+    background-color: rgba(205, 205, 205, 0.6);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2em;
+    padding-top: 0.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+
+button.link {
+    background:none;
+    border: none;
+    font-size: 1em;
+    padding: 0.2em;
+}
+
+button.link:hover {
+    color: rgb(180, 180, 180);
 }
