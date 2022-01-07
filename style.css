@@ -7,18 +7,18 @@ body {
 }
 
 h1 {
-  padding-top: 20px;
+  padding-top: 1em;
   text-decoration: underline;
 }
 
 #contents {
-  margin-top: 40px;
+  margin-top: 2em;
   background-color: rgba(205, 205, 205, 0.6);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  height: 800px;
-  width: 700px;
+  height: 50em;
+  width: 42.5rem;
   border-radius: 3px;
 }
 
@@ -26,9 +26,9 @@ h1 {
   display: grid;
   max-width: 100%;
   min-height: 85%;
-  grid-template-rows:  7em 25em 7em;
-  grid-template-columns: 345px 345px ;
-  gap: 10px;
+  grid-template-rows:  7em 20em 7em;
+  grid-template-columns: 21rem 21rem ;
+  gap: 0.5rem;
 
 }
 
@@ -69,7 +69,6 @@ ul li {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-    background-color: brown;
 }
 
 footer {
@@ -97,4 +96,20 @@ button.link {
 
 button.link:hover {
     color: rgb(180, 180, 180);
+}
+
+@media screen and (max-width: 730px) {
+    #info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contents {
+        max-width: 90vw;
+    }
+
+    #databox1, #databox2 {
+        margin-right: 2em;
+    }
+
 }
