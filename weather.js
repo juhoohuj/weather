@@ -36,7 +36,7 @@ function weatherToday() {
             document.getElementById("cloudiness").innerHTML = "Pilvisyys: " + weather.clouds.all + "%";
             
 
-            if {}
+            
         }
         
         else {
