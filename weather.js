@@ -1,3 +1,6 @@
+//Juho Ahonen
+
+//Muuttujat, kuuntelijat, taulukko
 let counter = 0
 let searchButton = document.getElementById("search")
 let firstCountry = document.getElementById("first")
@@ -13,6 +16,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+//Sään hakufunktio
 function weatherToday() {
     let city = document.getElementById("haku").value
     let xhttp = new XMLHttpRequest();
@@ -51,7 +55,7 @@ function weatherToday() {
     }
 
 
-    
+//funktiot äskettäin haetuille kaupungeille
 function searchedCountry() {
     document.getElementById("haku").value = firstCountry.innerText
     weatherToday();
