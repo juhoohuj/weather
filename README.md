@@ -1,1 +1,3 @@
 # weather
+
+Repositorio koulutehtävän palautukselle.
